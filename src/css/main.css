@@ -188,7 +188,7 @@ a:focus-visible {
 }
 
 .hero {
-  background: linear-gradient(269.88deg, rgba(38, 34, 34, 0) 0.1%, rgba(33, 32, 32, 0.91) 99.89%), url("../../../src/img/hero-bg.webp");
+  background: linear-gradient(269.88deg, rgba(38, 34, 34, 0) 0.1%, rgba(33, 32, 32, 0.91) 99.89%), url("../../src/img/hero-bg.webp");
   background-size: cover;
   height: 100vh;
   padding: 0;
@@ -402,7 +402,7 @@ a:focus-visible {
 }
 
 .services {
-  background-image: linear-gradient(rgba(54, 57, 89, 0.8), rgba(54, 57, 89, 0.8)), url("../../../src/img/services-bg.jfif");
+  background-image: linear-gradient(rgba(54, 57, 89, 0.8), rgba(54, 57, 89, 0.8)), url("../../src/img/services-bg.jfif");
   background-size: cover;
 }
 .services__header {
@@ -467,7 +467,7 @@ a:focus-visible {
 }
 
 .pricing {
-  background-image: url("../../../src/img/price.webp");
+  background-image: url("../../src/img/price.webp");
   background-size: cover;
 }
 .pricing__wrapper {
@@ -594,7 +594,7 @@ a:focus-visible {
   flex: 1;
 }
 .contact__item--form {
-  background-image: linear-gradient(rgba(54, 57, 89, 0.8), rgba(54, 57, 89, 0.8)), url("../../../src/img/contact.webp");
+  background-image: linear-gradient(rgba(54, 57, 89, 0.8), rgba(54, 57, 89, 0.8)), url("../../src/img/contact.webp");
   background-size: cover;
   padding: 70px 3rem;
   text-align: center;
