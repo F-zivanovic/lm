@@ -1,0 +1,52 @@
+@use '../../abstracts/index' as *;
+
+.bio{
+    background-color: $primary-color;
+
+    &__header{ text-align: center; }
+
+    &__heading{
+        font-weight: 500;
+        font-size: 3rem;
+    }
+
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3rem;
+    }
+
+    &__item{
+        flex: 0 0 45%;
+
+        &--img{
+            position: relative;
+            z-index: 1;
+
+            &::after{
+                position: absolute;
+                background: #EADEC7;
+                border-radius: 15px;
+                top: 5%;
+                left: 5%;
+                display: block;
+                content: "";
+                width: 90%;
+                height: 100%;
+                z-index: -1;
+            }
+        }
+    }
+
+    &__icon{
+        text-align: center;
+        margin: 1rem 0;
+
+        img{
+            width: 10px;
+            height: 10px;
+        }
+    }
+
+    &__text{ text-align: justify; }
+}

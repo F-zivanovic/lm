@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+// 1. Vendors
+@use 'vendors/normalize';
+
+// 2. Base stuff
+@use 'base/base';
+@use 'base/helpers';
+
+// 3. Layout-related sections
+@use 'layout/nav';
+@use 'layout/footer';
+
+// 4. Components
+@use 'components/button';
+
+// 5. Pages
+@use 'pages/home/hero';
+@use 'pages/home/about';
+@use 'pages/home/services';
+@use 'pages/home/pricing';
+@use 'pages/home/feature';
+@use 'pages/home/contact';
+
+@use 'pages/bio/bio';
+
+@use 'pages/services/service';
+

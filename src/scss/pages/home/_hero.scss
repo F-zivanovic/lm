@@ -1,0 +1,73 @@
+@use '../../abstracts/index' as *;
+
+.hero{
+    background: linear-gradient(269.88deg, rgba(38, 34, 34, 0) 0.1%, rgba(33, 32, 32, 0.91) 99.89%), 
+                url('../../../src/img/hero-bg.webp');
+    background-size: cover;
+    height: 100vh;
+    padding: 0;
+
+    &__wrapper{
+        @include flex(center, flex-start, column);
+        height: 80vh;
+    }
+
+    &__subheading{
+        color: $secondary-color;
+
+        font-size: 1.5rem;
+        display: inline-block;
+
+        &::after{
+            background-color: $secondary-color;
+
+            display: block;
+            content: "";
+            width: 100%;
+            height: 1px;
+        }
+    }
+
+    &__heading{
+        font-size: 4.5rem;
+        font-weight: 400;
+        margin-bottom: 1.5rem;
+
+        span{ font-style: italic;}
+    }
+
+    &__btn{
+        font-weight: 500;
+        font-size: 1.1rem;
+        color: $primary-color;
+        background-color: $white-color;
+        position: relative;
+        // width: 300px;
+        border-radius: 30px;
+        padding: 1rem 3.5rem 1rem 2rem;
+
+        &:hover{
+            background-color: $primary-color;
+            color: $white-color;
+        }
+
+        &:hover > .fa-solid{
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .fa-solid{
+            transform: translateY(-50%);
+            position: absolute;
+            background-color: $primary-color;
+            color: $white-color;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            right: 10px;
+        }
+    }
+}

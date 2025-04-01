@@ -1,0 +1,43 @@
+@use '../abstracts/index' as *;
+
+.footer{
+    background-color: $primary-color;
+
+    padding: 70px 0;
+
+    &__wrapper{
+        display: flex;
+        row-gap: 2rem;
+    }
+
+    &__item{ flex: 1; }
+
+    &__heading{
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+
+    &__text{
+        font-size: 1.1rem;
+        color: #FFFFFF85;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    &__link{
+        color: #FFFFFF85;
+
+        &:hover{ color: $secondary-color; }
+    }
+
+    &__social{
+        margin-top: 2rem;
+        display: flex;
+        gap: 2rem;
+    }
+}

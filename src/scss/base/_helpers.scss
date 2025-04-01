@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+
+
+.container {
+    width: 80%;
+    margin: auto;
+
+    @include rwd(576){ width: 90%; }
+}
+
+.header{
+    background-color: $primary-color;
+
+    text-align: center;
+    padding: 70px 0;
+
+    &__heading{
+        font-size: 3rem;
+    }
+}
+

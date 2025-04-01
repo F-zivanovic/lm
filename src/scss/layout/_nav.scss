@@ -1,0 +1,95 @@
+@use '../abstracts/index' as *;
+
+.nav{
+    @include flex(space-between, center);
+    padding: 1rem 0;
+
+    &--primary{
+        background-color: $primary-color;
+
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    &__img{
+        height: 75px;
+        width: 250px;
+    }
+
+    &__list{
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__item--dropdown{
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+        position: relative;
+
+        .fa-solid{ font-size: 0.8rem; }
+
+        &:hover > .nav__dropdown{
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    }
+
+    &__link{
+        color: $white-color;
+
+        text-transform: uppercase;
+
+        &:hover{ color: $secondary-color; }
+    }
+
+    &__btn{
+        background-color: $primary-color;
+        color: $white-color;
+
+        font-size: 0.8rem;
+        border: 1px solid $white-color;
+        border-radius: 20px;
+        padding: 10px 1.2rem;
+
+        &:hover{
+            background: transparent;
+            border: 2px solid $primary-color;
+        }
+
+        &--primary{
+            background-color: transparent;
+
+            &:hover{
+                background-color: $secondary-color;
+                color: $white-color;
+            }
+        }
+    
+    }
+
+    &__dropdown{
+        position: absolute;
+        top: 150%;
+        background: #B1AFAF;
+        list-style: none;
+        padding: 0.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        min-width: 200px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: 0.4s linear;
+
+        a{ 
+            color: $black-color;
+            
+            &:hover{
+                 color: $secondary-color;
+            }
+        }
+    }
+}

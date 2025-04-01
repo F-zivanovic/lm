@@ -1,0 +1,49 @@
+@use '../abstracts' as *;
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  list-style-type: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+html{
+  color: $white-color;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 100%;
+  overflow-x: hidden;
+  line-height: 1.4;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: "Playfair Display", serif;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+section { padding: 70px 0; }
+
+button { transition: 0.4s linear; }
+
+a {
+  color: $white-color;
+
+  transition: 0.4s linear;
+
+  &:hover{ color: $secondary-color; }
+
+  &:focus-visible{
+    text-decoration: underline;
+    outline: 1px dashed #e3b723;
+  }
+}

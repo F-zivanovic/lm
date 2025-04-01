@@ -1,0 +1,97 @@
+@use '../../abstracts/index' as *;
+
+.contact{
+    display: flex;
+    padding: 0;
+
+    &__item{
+        flex: 1;
+
+        &--form{
+            background-image: linear-gradient(rgba(54, 57, 89, 0.8), rgba(54, 57, 89, 0.8)),
+            url('../../../src/img/contact.webp');
+            background-size: cover;
+            padding: 70px 3rem;
+            text-align: center;
+        }
+
+        &--text{
+            padding: 70px 5rem;
+        }
+    }
+
+    &__heading{
+        font-weight: 500;
+        font-size: 3rem;
+        color: $primary-color;
+
+        &:after{
+            display: block;
+            content: "";
+            background-color: $primary-color;
+            height: 5px;
+            width: 80px;
+        }
+    }
+
+    &__list{
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        li{
+
+            img{
+                width: 45px;
+                height: 45px;
+            }
+
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: $primary-color;
+        }
+    }
+
+    &__input{
+        width: 100%;
+        border-radius: 3px;
+        padding: 1rem;
+        background-color: #D9D9D973;
+        color: $primary-color;
+        font-weight: 600;
+        
+        &::placeholder{
+            color: $primary-color;
+             font-weight: 600;
+        }
+    }
+
+    &__box{
+        margin-bottom: 2rem;
+        display: flex;
+        gap: 1rem;
+    }
+
+    textarea{ height: 250px; }
+
+    &__btn{
+        font-size: 17px;
+        color: $secondary-color;
+        border: 2px solid $secondary-color;
+        border-radius: 24px;
+        background: transparent;
+        text-transform: uppercase;
+        padding: 1rem 2.5rem;
+        display: inline-block;
+        margin-top: 2rem;
+        cursor: pointer;
+
+        &:hover{
+            background: $secondary-color;
+            color: $white-color;
+        }
+    }
+}
