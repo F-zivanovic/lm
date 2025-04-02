@@ -25,105 +25,128 @@
     <section class="hero">
 
         <!-- Nav section -->
-         <nav class="nav container">
+         <nav class="nav">
 
-            <a href="index.html" class="nav__logo">
-                <img src="src/img/logo.png" 
+            <a href="index.html">
+                <img src="src/img/advokatska-kancelarija-logo.png" 
                      alt="Advokatska kancelarija Miljanić Beograd - logo"
-                     class="nav__img">
+                     class="logo"
+                     height="75px"
+                     width="250px">
             </a>
 
-            <ul class="nav__list">
+            <ul class="nav__list" id="nav-list">
                 <li class="nav__item"><a href="index.html" class="nav__link">početna</a></li>
                 <li class="nav__item"><a href="biografija.html" class="nav__link">biografija</a></li>
                 <li class="nav__item nav__item--dropdown">
                     <a href="oblasti-rada.html" class="nav__link">oblasti rada</a>
                     <span class="fa-solid fa-chevron-down"></span>
                     <ul class="nav__dropdown">
-                        <li><a href="nepokretnosti.html">Nepokretnosti</a></li>
-                        <li><a href="upis-nepokretnosti.html">Upis nepokretnosti</a></li>
-                        <li><a href="obligaciono-pravo.html">Obligaciono pravo</a></li>
-                        <li><a href="privredno-pravo.html">Privredno pravo</a></li>
-                        <li><a href="prekrsajni-postupak.html">Prekršajni postupak</a></li>
-                        <li><a href="naknada-stete.html">Naknada štete</a></li>
-                        <li><a href="prijava-stranaca.html">Prijava stranaca</a></li>
+                        <li><a href="oblasti-rada.html#nepokretnosti">Nepokretnosti</a></li>
+                        <li><a href="oblasti-rada.html#upis">Upis nepokretnosti</a></li>
+                        <li><a href="oblasti-rada.html#obligaciono">Obligaciono pravo</a></li>
+                        <li><a href="oblasti-rada.html#privredno">Privredno pravo</a></li>
+                        <li><a href="oblasti-rada.html#prekrsaj">Prekršajni postupak</a></li>
+                        <li><a href="oblasti-rada.html#naknada">Naknada štete</a></li>
+                        <li><a href="oblasti-rada.html#prijava">Prijava stranaca</a></li>
                     </ul>
                 </li>
                 <li class="nav__item"><a href="#pricing" class="nav__link">cenovnik</a></li>
-                <li class="nav__item"><a href="index.html" class="nav__link">članci</a></li>
                 <li class="nav__item"><a href="#contact" class="nav__link">kontakt</a></li>
+                <span class="fa-solid fa-circle-xmark nav__close" id="close"></span>
             </ul>
 
             <a href="tel:+381607200026" class="nav__btn">+381607200026</a>
+
+            <span class="fa-solid fa-bars nav__hamburger" id="hamburger"></span>
+
          </nav>
 
          <div class="hero__wrapper container">
             <p class="hero__subheading">Efektivna pravna rešenja</p>
             <h1 class="hero__heading">Advokatska <br> kancelarija <br> <span>Miljanić</span> Beograd</h1>
-            <a href="#" class="hero__btn">
-                Upoznajmo se
-                <span class="fa-solid fa-arrow-right"></span>
+            <a href="oblasti-rada.html" class="hero__btn">
+                Saznaj više
+                <span class="fa-solid fa-arrow-right" aria-hidden="true"></span>
             </a>
          </div>
     </section>
     <!-- Hero section ends -->
 
 
+
+
+
     <!-- About section starts -->
-    <section class="about" id="about">
+    <section class="about" >
         <main class="about__wrapper container">
+
             <article class="about__item about__item--img">
-                <img src="src/img/luka-miljanic.webp" alt="Advokat Beograd Luka Miljanić" class="about__img">
+                <img src="src/img/luka-miljanic.webp" 
+                     alt="Advokat Beograd - Luka Miljanić" 
+                     class="about__img"
+                     width="100%"
+                     height="100%">
                 <div class="about__badge">10 
                     <span>godina iskustva</span>
                     <div class="about__circle"></div>
                 </div>
-              
             </article>
+
             <article class="about__item">
-                <img src="src/img/Vector.png" alt="" width="70px" height="70px">
+                <span class="fa-solid fa-scale-balanced about__icon" aria-hidden="true"></span>
                 <h2 class="about__heading">Luka Miljanić</h2>
                 <h3 class="about__subheading">advokat</h3>
                 <ul class="about__list">
                     <li>
-                        <img src="src/img/checkmark-circle.png" alt="">
+                        <img src="src/img/checkmark-circle.png" 
+                             alt="Advokatska kancelarija Miljanic Beograd" 
+                             width="20px" height="20px" 
+                             aria-hidden="true">
                         Advokat posvećen pružanju strateških pravnih saveta i zastupanju klijenata pred sudovima i državnim organima.
                     </li>
     
                     <li>
-                        <img src="src/img/checkmark-circle.png" alt="">
+                        <img src="src/img/checkmark-circle.png" 
+                             alt="Advokatska kancelarija Miljanic Beograd" 
+                             width="20px" height="20px" 
+                             aria-hidden="true">
                         Sa iskustvom u advokaturi i pravnim procedurama, svojim klijentima nudi stručnost, analitičnost i posvećenost u rešavanju pravnih izazova.
                     </li>
     
                     <li>
-                        <img src="src/img/checkmark-circle.png" alt="">
+                        <img src="src/img/checkmark-circle.png" 
+                             alt="Advokatska kancelarija Miljanic Beograd" 
+                             width="20px" height="20px" 
+                             aria-hidden="true">
                         Njegov profesionalni pristup kombinuje pravno znanje, transparentnu komunikaciju i rešenja prilagođena specifičnim potrebama klijenta.
                     </li>
                 </ul>
+
                 <a href="biografija.html" class="about__btn">
-                    Detaljnije
-                    <span class="fa-solid fa-arrow-right"></span>
+                    Detaljnije <span class="fa-solid fa-arrow-right" aria-hidden="true"></span>
                 </a>
             </article>
         </main>
 
-        <div class="about__quote container">
-            <p>“Nepoznavanje zakona šteti.”</p>
-            <p>“Pravičnost je gospodarica i kraljica svih vrlina.”</p>
-            <p class="center">“Neka bude pravda, pa makar propao svet.”</p>
-            <p>“Nepoznavanje zakona šteti.”</p>
+        <div class="about__quote">
+            <img src="src/img/Vector 11.png" alt="" 
+                 class="about__arrow about__arrow--left" 
+                 id="quote-left"
+                 width="50px"
+                 height="20px">
+            <p id="quote">“Gde postoji pravo, postoji i pravni lek.”</p>
+            <img src="src/img/Vector 10.png" alt="" 
+                 class="about__arrow about__arrow--right"
+                id="quote-right"
+                width="50px"
+                height="20px">
         </div>
-
-        <footer class="about__footer">
-            <p>
-                “Gde postoji pravo, postoji i pravni lek.”
-                <img src="src/img/Vector 11.png" alt="" class="about__arrow about__arrow__left">
-                <img src="src/img/Vector 10.png" alt="" class="about__arrow about__arrow__right" >
-            </p>
-       
-        </footer>
     </section>
     <!-- About section ends -->
+
+
+
 
 
     <!-- Service section starts -->
@@ -140,74 +163,74 @@
 
             <article class="services__item">
                 <div class="services__img">
-                    <img src="src/img/services (1).png" alt="">
+                    <img src="src/img/areas/advokat-katastar.webp" 
+                         alt="Advokat za upis u katatastar Beograd"
+                         width="80px" height="80px">
                 </div>
                 <p>Upis u katastar</p>
             </article>
 
             <article class="services__item">
                 <div class="services__img">
-                    <img src="src/img/services (1).png" alt="">
+                    <img src="src/img/areas/advokat-nepokretnosti.webp" 
+                         alt="Advokat za nepokretnosti Beograd"
+                         width="80px" height="80px">
                 </div>
                 <p>Nepokretnosti</p>
             </article>
 
             <article class="services__item">
                 <div class="services__img">
-                    <img src="src/img/services (1).png" alt="">
+                    <img src="src/img/areas/prekrsajni-postupak.webp" 
+                         alt="Advokat za prekršajni postupak Beograd"
+                         width="80px" height="80px">
                 </div>
                 <p>Prekršajni postupak</p>
             </article>
 
             <article class="services__item">
                 <div class="services__img">
-                    <img src="src/img/services (1).png" alt="">
+                    <img src="src/img/areas/obligaciono-pravo.webp" 
+                         alt="Advokat za obligaciono pravo Beograd"
+                         width="80px" height="80px">
                 </div>
                 <p>Obligaciono pravo</p>
             </article>
 
-            <article class="services__item">
-                <div class="services__img">
-                    <img src="src/img/services (1).png" alt="">
-                </div>
-                <p>privredno pravo</p>
-            </article>
-
-            <article class="services__item">
-                <div class="services__img">
-                    <img src="src/img/services (1).png" alt="">
-                </div>
-                <p>Naknada štete</p>
-            </article>
-
-            <article class="services__item">
-                <div class="services__img">
-                    <img src="src/img/services (1).png" alt="">
-                </div>
-                <p>Radne dozvole za strance</p>
-            </article>
-          
-
           </main>
+
+          <a href="oblasti-rada.html" class="services__btn">
+            Vidi sve usluge <span class="fa-solid fa-arrow-right" aria-hidden="true"></span>
+          </a>
+
     </section>
     <!-- Service section ends -->
 
 
+
+
+
     <!-- Pricing section starts -->
     <section class="pricing" id="pricing">
-
         <div class="pricing__wrapper container">
             <h2 class="pricing__heading">Advokatska tarifa</h2>
             <p class="pricing__text">
                 Naša advokatska kancelarija naplaćuje svoje usluge u skladu sa važećom advokatskom tarifom prema vrednosti preduzetih radnji. 
+                Advokatska tarifa je objavljena u Službenom glasniku dana 03.06.2023.godine pod brojem ("Sl. glasnik RS", br. 43/2023).
             </p>
-            <a href="" class="pricing__btn">
-                Pogledaj cenovnik
-                <span class="fa-solid fa-arrow-right"></span>
+            <a href="https://www.paragraf.rs/propisi/tarifa_o_nagradama_i_naknadama_troskova_za_rad_advokata.html"
+               class="pricing__btn"
+               target="_blank">
+               Tabelarni prikaz advokatske tarife
+               <span class="fa-solid fa-arrow-right" aria-hidden="true"></span>
             </a>
         </div>
     </section>
     <!-- Pricing section ends -->
+
+
+
+
 
     <!-- Feature section starts -->
     <section class="feature">
@@ -248,6 +271,10 @@
     </section>
     <!-- Feature section ends -->
 
+
+
+
+
     <!-- Contact section starts -->
     <section class="contact" id="contact">
 
@@ -255,24 +282,20 @@
             <h2 class="contact__heading">Kontakt podaci</h2>
 
             <ul class="contact__list">
-                <li>
-                    <img src="src/img/phone.png" alt="">
-                    +381607200026
+                <li class="contact__list__item">
+                    <span class="fa-solid fa-phone" aria-hidden="true"></span>+381607200026
                 </li>
 
-                <li>
-                    <img src="src/img/location.png" alt="">
-                    Nikole Uzunovića 126, Niš
+                <li class="contact__list__item">
+                    <span class="fa-solid fa-location-arrow" aria-hidden="true"></span>Vlajkovićeva 5, Stari grad, Beograd
                 </li>
 
-                <li>
-                    <img src="src/img/email 1.png" alt="">
-                    admin@gmail.com
+                <li class="contact__list__item">
+                    <span class="fa-solid fa-envelope" aria-hidden="true"></span>lukamiljanic@gmail.com
                 </li>
 
-                <li>
-                    <img src="src/img/clock 1.png" alt="">
-                    NE UZNEMIRAVATI PRE 09:00
+                <li class="contact__list__item">
+                    <span class="fa-solid fa-clock" aria-hidden="true"></span>NE UZNEMIRAVATI PRE 09:00
                 </li>
             </ul>
         </article>
@@ -290,11 +313,11 @@
 
     </section>
     <!-- Contact section ends -->
+   
 
 
 
 
-    
     <!-- Footer section starts -->
     <footer class="footer">
         <main class="footer__wrapper container">
@@ -302,13 +325,13 @@
             <article class="footer__item">
                 <p class="footer__heading">Pravne usluge</p>
                 <ul class="footer__list">
-                    <li><a href="oblasti-rada.html" class="footer__link">Nepokretnosti</a></li>
-                    <li><a href="oblasti-rada.html" class="footer__link">Upis u katastar</a></li>
-                    <li><a href="oblasti-rada.html" class="footer__link">Obligaciono pravo</a></li>
-                    <li><a href="oblasti-rada.html" class="footer__link">Privredno pravo</a></li>
-                    <li><a href="oblasti-rada.html" class="footer__link">Prekršajni postupak</a></li>
-                    <li><a href="oblasti-rada.html" class="footer__link">Naknada štete</a></li>
-                    <li><a href="oblasti-rada.html" class="footer__link">Prijava boravka i radne dozvole za srance</a></li>
+                    <li><a href="oblasti-rada.html#nepokretnosti">Nepokretnosti</a></li>
+                    <li><a href="oblasti-rada.html#upis">Upis nepokretnosti</a></li>
+                    <li><a href="oblasti-rada.html#obligaciono">Obligaciono pravo</a></li>
+                    <li><a href="oblasti-rada.html#privredno">Privredno pravo</a></li>
+                    <li><a href="oblasti-rada.html#prekrsaj">Prekršajni postupak</a></li>
+                    <li><a href="oblasti-rada.html#naknada">Naknada štete</a></li>
+                    <li><a href="oblasti-rada.html#prijava">Prijava stranaca</a></li>
                 </ul> 
             </article>
 
@@ -317,8 +340,7 @@
                 <ul class="footer__list">
                     <li><a href="index.html" class="footer__link">Početna</a></li>
                     <li><a href="biografija.html" class="footer__link">Biografija</a></li>
-                    <li><a href="advokatska-tarifa.html" class="footer__link">Cenovnik</a></li>
-                    <li><a href="#" class="footer__link">Članci</a></li>
+                    <li><a href="#pricing" class="footer__link">Cenovnik</a></li>
                     <li><a href="#contact" class="footer__link">Kontakt</a></li>
                     <li><a href="#" class="footer__link">Politika privatnosti</a></li>
                 </ul>
@@ -342,7 +364,19 @@
     </footer>
     <!-- Footer section ends -->
 
+
+
+
+
+    <!-- Scroll to top -->
+    <i class="arrow__up fa-solid fa-chevron-up" id="arrow-up"></i>
+
+
+
+
+
     <!-- Custom JS -->
     <script src="src/js/main.js"></script>
+    <script src="src/js/quote-slider.js"></script>
 </body>
 </html>

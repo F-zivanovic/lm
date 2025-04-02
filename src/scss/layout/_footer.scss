@@ -8,6 +8,8 @@
     &__wrapper{
         display: flex;
         row-gap: 2rem;
+
+        @include rwd(992){ flex-direction: column; }
     }
 
     &__item{ flex: 1; }
@@ -27,12 +29,6 @@
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
-    }
-
-    &__link{
-        color: #FFFFFF85;
-
-        &:hover{ color: $secondary-color; }
     }
 
     &__social{

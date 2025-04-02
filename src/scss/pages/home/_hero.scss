@@ -10,6 +10,12 @@
     &__wrapper{
         @include flex(center, flex-start, column);
         height: 80vh;
+
+        @include rwd(768){
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
     }
 
     &__subheading{
@@ -17,6 +23,8 @@
 
         font-size: 1.5rem;
         display: inline-block;
+
+        @include rwd(576){ font-size: 1.2rem; }
 
         &::after{
             background-color: $secondary-color;
@@ -29,11 +37,12 @@
     }
 
     &__heading{
-        font-size: 4.5rem;
+        font-size: clamp(2.5rem, 8vw, 4.5rem);
         font-weight: 400;
         margin-bottom: 1.5rem;
 
         span{ font-style: italic;}
+
     }
 
     &__btn{
@@ -42,7 +51,6 @@
         color: $primary-color;
         background-color: $white-color;
         position: relative;
-        // width: 300px;
         border-radius: 30px;
         padding: 1rem 3.5rem 1rem 2rem;
 

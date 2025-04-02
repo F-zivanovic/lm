@@ -3,78 +3,97 @@
 
 .about{
     color: $primary-color;
+
     padding-bottom: 0;
 
     &__wrapper{
-        display: flex;
-        justify-content: space-between;
+        @include flex(space-between, stretch, wrap);
+        row-gap: 3rem;
     }
 
     &__item{
         flex: 0 0 45%;
 
+        @include rwd(1200){ flex: 0 0 100%;}
+
         &--img{
             position: relative;
 
             &::after{
-                position: absolute;
+                @include position(absolute, 1rem, auto, auto, 1rem, 100%, 100%);
                 background: #B98E444D;
                 border-radius: 15px;
-                top: 5%;
-                left: 5%;
                 display: block;
                 content: "";
-                width: 90%;
-                height: 100%;
                 z-index: -1;
             }
+
+            @include rwd(1200){ order: 2;}
         }
     }
 
-
     &__badge{
+        background-color: $white-color;
+
         display: flex;
         flex-direction: column;
         align-items: center;
         position: absolute;
         border-radius: 10px;
-        background-color: $white-color;
         bottom: 50px;
         width: 200px;
         left: -100px;
         border: 1px solid $secondary-color;
         font-weight: 500;
         font-style: italic;
-        font-size: 100px;
+        font-size: 7rem;
         z-index: 12;
         overflow: hidden;
 
-        span{
+        @include rwd(768){
+            top: 1rem;
+            right: 1rem;
+            left: auto;
+            bottom: auto;
+            font-size: 4rem;
+            width: 100px;
+        }
+
+        span{ 
             font-size: 1.5rem;
+            text-align: center;
+            
+            @include rwd(768){ font-size: 1rem }
         }
 
         .about__circle{
-            position: absolute;
-            left: -30px;
-            top: -10px;
-            width: 130px;
-            height: 130px;
-            border-radius: 130px;
-            z-index: -1;
+            @include position(absolute, -10px, auto, auto, -30px, 130px, 130px);
             background-color: $secondary-color;
+
+            border-radius: 50%;
+            z-index: -1;
         }
+    }
+
+    &__icon{
+        color: $secondary-color;
+
+        font-size: 2.5rem;
     }
 
     &__heading{
         font-weight: 500;
         font-size: 4.5rem;
+
+        @include rwd(768){ font-size: 3rem;}
     }
 
     &__subheading{
         color: $secondary-color;
+
         font-size: 1.1rem;
         text-transform: uppercase;
-        font-weight: 400;
+        font-weight: 500;
         margin-bottom: 2rem;
     }
 
@@ -98,7 +117,6 @@
         color: $primary-color;
         background-color: $white-color;
         position: relative;
-        // width: 300px;
         border-radius: 30px;
         padding: 1rem 4.5rem 1rem 2rem;
         border: 1px solid $primary-color;
@@ -110,11 +128,9 @@
             color: $white-color;
         }
 
-        &:hover > .fa-solid{
-            background: rgba(255, 255, 255, 0.2);
-        }
+        &:hover > .fa-solid{ background: rgba(255, 255, 255, 0.2); }
 
-        .fa-solid{
+        span{
             transform: translateY(-50%);
             position: absolute;
             background-color: $primary-color;
@@ -127,51 +143,38 @@
             position: absolute;
             top: 50%;
             right: 10px;
+            font-size: 1rem;
         }
     }
 
     &__quote{
-        margin: 3rem auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-
-        p{
-            flex: 0 0 50%;
-            font-weight: 500;
-            font-size: 1.5rem;
-            font-style: italic;
-
-        }
-    }
-
-    &__footer{
+        margin-top: 1rem;
         background: #B98E441F;
         padding: 2rem;
         text-align: center;
         font-weight: 500;
         font-size: 25px;
         font-style: italic;
+        position: relative;
 
-        P{
-            position: relative;
+        P{ 
             display: inline-block;
+            
+            @include rwd(768){ font-size: 0.8rem;}
+        }
 
-            .about__arrow{
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                
-                &__left{
-                    left: -80px;
-                }
+        .about__arrow{
+            width: 50px;
+            height: 20px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            
+            &--left{ left: 20px;}
 
-                &__right{
-                    right: -80px;
-                }
-            }
-
+            &--right{right: 20px;}
         }
     }
+
 }

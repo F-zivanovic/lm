@@ -4,31 +4,39 @@
     display: flex;
     padding: 0;
 
+    @include rwd(992){ flex-direction: column; }
+
     &__item{
         flex: 1;
 
         &--form{
             background-image: linear-gradient(rgba(54, 57, 89, 0.8), rgba(54, 57, 89, 0.8)),
-            url('../../src/img/contact.webp');
+            url('../../src/img/advokat-beograd-kontakt.webp');
             background-size: cover;
             padding: 70px 3rem;
             text-align: center;
         }
 
-        &--text{
+        &--text{ 
             padding: 70px 5rem;
+            
+            @include rwd(576){ padding: 70px 2rem; }
         }
     }
 
     &__heading{
-        font-weight: 500;
-        font-size: 3rem;
         color: $primary-color;
 
-        &:after{
+        font-weight: 500;
+        font-size: 3rem;
+
+        @include rwd(768){font-size: 2.5rem; }
+
+        &::after{
+            background-color: $primary-color;
+
             display: block;
             content: "";
-            background-color: $primary-color;
             height: 5px;
             width: 80px;
         }
@@ -40,39 +48,34 @@
         flex-direction: column;
         gap: 2rem;
 
-        li{
-
-            img{
-                width: 45px;
-                height: 45px;
-            }
+        &__item{
+            color: $primary-color;
 
             font-weight: 500;
             display: flex;
             align-items: center;
             gap: 1rem;
-            color: $primary-color;
         }
     }
 
     &__input{
+        color: $primary-color;
+
         width: 100%;
         border-radius: 3px;
         padding: 1rem;
         background-color: #D9D9D973;
-        color: $primary-color;
         font-weight: 600;
         
-        &::placeholder{
-            color: $primary-color;
-             font-weight: 600;
-        }
+        &::placeholder{ color: $primary-color; }
     }
 
     &__box{
         margin-bottom: 2rem;
         display: flex;
         gap: 1rem;
+
+        @include rwd(576){ flex-direction: column; }
     }
 
     textarea{ height: 250px; }
@@ -84,7 +87,7 @@
         border-radius: 24px;
         background: transparent;
         text-transform: uppercase;
-        padding: 1rem 2.5rem;
+        padding: 0.5rem 2.5rem;
         display: inline-block;
         margin-top: 2rem;
         cursor: pointer;
@@ -94,4 +97,6 @@
             color: $white-color;
         }
     }
+
+    .fa-solid{ font-size: 2rem;}
 }

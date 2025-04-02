@@ -25,35 +25,40 @@
     <!-- nav section starts -->
     <nav class="nav nav--primary">
 
-            <a href="index.html" class="nav__logo">
-                <img src="src/img/logo.png" 
-                     alt="Advokatska kancelarija Miljanić Beograd - logo"
-                     class="nav__img">
-            </a>
+        <a href="index.html">
+            <img src="src/img/advokatska-kancelarija-logo.png" 
+                 alt="Advokatska kancelarija Miljanić Beograd - logo"
+                 class="logo"
+                 height="75px"
+                 width="250px">
+        </a>
 
-            <ul class="nav__list">
-                <li class="nav__item"><a href="index.html" class="nav__link">početna</a></li>
-                <li class="nav__item"><a href="biografija.html" class="nav__link">biografija</a></li>
-                <li class="nav__item nav__item--dropdown">
-                    <a href="oblasti-rada.html" class="nav__link">oblasti rada</a>
-                    <span class="fa-solid fa-chevron-down"></span>
-                    <ul class="nav__dropdown">
-                        <li><a href="nepokretnosti.html">Nepokretnosti</a></li>
-                        <li><a href="upis-nepokretnosti.html">Upis nepokretnosti</a></li>
-                        <li><a href="obligaciono-pravo.html">Obligaciono pravo</a></li>
-                        <li><a href="privredno-pravo.html">Privredno pravo</a></li>
-                        <li><a href="prekrsajni-postupak.html">Prekršajni postupak</a></li>
-                        <li><a href="naknada-stete.html">Naknada štete</a></li>
-                        <li><a href="prijava-stranaca.html">Prijava stranaca</a></li>
-                    </ul>
-                </li>
-                <li class="nav__item"><a href="#pricing" class="nav__link">cenovnik</a></li>
-                <li class="nav__item"><a href="index.html" class="nav__link">članci</a></li>
-                <li class="nav__item"><a href="#contact" class="nav__link">kontakt</a></li>
-            </ul>
+        <ul class="nav__list nav__list--secondary" id="nav-list">
+            <li class="nav__item"><a href="index.html" class="nav__link">početna</a></li>
+            <li class="nav__item"><a href="biografija.html" class="nav__link">biografija</a></li>
+            <li class="nav__item nav__item--dropdown">
+                <a href="oblasti-rada.html" class="nav__link">oblasti rada</a>
+                <span class="fa-solid fa-chevron-down"></span>
+                <ul class="nav__dropdown">
+                    <li><a href="oblasti-rada.html#nepokretnosti">Nepokretnosti</a></li>
+                    <li><a href="oblasti-rada.html#upis">Upis nepokretnosti</a></li>
+                    <li><a href="oblasti-rada.html#obligaciono">Obligaciono pravo</a></li>
+                    <li><a href="oblasti-rada.html#privredno">Privredno pravo</a></li>
+                    <li><a href="oblasti-rada.html#prekrsaj">Prekršajni postupak</a></li>
+                    <li><a href="oblasti-rada.html#naknada">Naknada štete</a></li>
+                    <li><a href="oblasti-rada.html#prijava">Prijava stranaca</a></li>
+                </ul>
+            </li>
+            <li class="nav__item"><a href="index.html#pricing" class="nav__link">cenovnik</a></li>
+            <li class="nav__item"><a href="index.html#contact" class="nav__link">kontakt</a></li>
+            <span class="fa-solid fa-circle-xmark nav__close" id="close"></span>
+        </ul>
 
-            <a href="tel:+381607200026" class="nav__btn nav__btn--primary">+381607200026</a>
-    </nav>
+        <a href="tel:+381607200026" class="nav__btn nav__btn--secondary">+381607200026</a>
+
+        <span class="fa-solid fa-bars nav__hamburger" id="hamburger"></span>
+
+     </nav>
     <!-- nav section ends -->
 
 
@@ -64,7 +69,7 @@
 
         <!-- Header part -->
          <header class="bio__header container">
-            <img src="src/img/Vector.png" alt="" width="70px" height="70px">
+            <span class="fa-solid fa-scale-balanced about__icon" aria-hidden="true"></span>
             <h1 class="bio__heading">Biografija - Luka Miljanić advokat</h1>
          </header>
 
@@ -72,7 +77,11 @@
          <main class="bio__wrapper container">
 
             <article class="bio__item bio__item--img">
-                <img src="src/img/luka-miljanic.webp" alt="Advokat Beograd Luka Miljanić" class="about__img">
+                <img src="src/img/luka-miljanic.webp" 
+                     alt="Advokat Beograd - Luka Miljanić" 
+                     width="100%"
+                     height="100%"
+                     class="about__img">
             </article>
 
             <article class="bio__item">
@@ -82,34 +91,25 @@
                     Osnovno obrazovanje stekao je u Osnovnoj školi „Vojvoda Živojin Mišić“ u Beogradu, nakon čega je školovanje nastavio u Sportskoj gimnaziji. Njegova akademska izvrsnost potvrđena je upisom na Pravni fakultet Univerziteta u Beogradu 2013. godine, koji je uspešno završio u roku. Tokom studija bio je stipendista Ministarstva prosvete, što je dodatno potvrdilo njegovu posvećenost i stručnost.
                 </p>
 
-                <div class="bio__icon">
-                    <img src="src/img/_.png" alt="" width="10px" height="10px">
-                </div>
+                <span class="fa-solid fa-star-of-life" aria-hidden="true"></span>
 
                 <p class="bio__text">
                     Pravne korake započeo je 2018. godine radom u javnobeležničkoj kancelariji, gde je stekao značajno praktično iskustvo i detaljno upoznao pravne procedure. Godina 2019. predstavlja prekretnicu u njegovoj karijeri – tada ulazi u advokaturu pod mentorstvom principala advokata Nikole Pantića. Iste godine postaje član Advokatske komore Beograda, najpre kao pripravnik, a nakon položenih pravosudnog i advokatskog ispita, i kao advokat.
                 </p>
 
-                <div class="bio__icon">
-                    <img src="src/img/_.png" alt="" width="10px" height="10px">
-                </div>
+                <span class="fa-solid fa-star-of-life" aria-hidden="true"></span>
 
                 <p class="bio__text">
                     Pored advokature, Luka Miljanić se aktivno bavio sportom. Od 2004. godine član je Streljačkog kluba Partizan, a 2013. godine osvojio je titulu juniorskog državnog šampiona malokalibarskom puškom. Streljaštvo je oblikovalo njegovu staloženost i fokusiranost – osobine koje su mu dragocene i u advokatskoj profesiji.
                 </p>
 
-
-                <div class="bio__icon">
-                    <img src="src/img/_.png" alt="" width="10px" height="10px">
-                </div>
+                <span class="fa-solid fa-star-of-life" aria-hidden="true"></span>
 
                 <p class="bio__text">
                     Kao advokat, posvećen je pružanju efikasnih i strateških pravnih saveta, kao i zastupanju klijenata pred sudovima i drugim državnim organima. Njegov pristup kombinuje stručnost, analitičnost i razumevanje specifičnih potreba klijenata, uz transparentnu komunikaciju i profesionalizam.
                 </p>
 
-                <div class="bio__icon">
-                    <img src="src/img/_.png" alt="" width="10px" height="10px">
-                </div>
+                <span class="fa-solid fa-star-of-life" aria-hidden="true"></span>
 
                 <p class="bio__text">
                     Tečno govori engleski i nemački jezik.
@@ -131,13 +131,13 @@
             <article class="footer__item">
                 <p class="footer__heading">Pravne usluge</p>
                 <ul class="footer__list">
-                    <li><a href="oblasti-rada.html" class="footer__link">Nepokretnosti</a></li>
-                    <li><a href="oblasti-rada.html" class="footer__link">Upis u katastar</a></li>
-                    <li><a href="oblasti-rada.html" class="footer__link">Obligaciono pravo</a></li>
-                    <li><a href="oblasti-rada.html" class="footer__link">Privredno pravo</a></li>
-                    <li><a href="oblasti-rada.html" class="footer__link">Prekršajni postupak</a></li>
-                    <li><a href="oblasti-rada.html" class="footer__link">Naknada štete</a></li>
-                    <li><a href="oblasti-rada.html" class="footer__link">Prijava boravka i radne dozvole za srance</a></li>
+                    <li><a href="oblasti-rada.html#nepokretnosti">Nepokretnosti</a></li>
+                    <li><a href="oblasti-rada.html#upis">Upis nepokretnosti</a></li>
+                    <li><a href="oblasti-rada.html#obligaciono">Obligaciono pravo</a></li>
+                    <li><a href="oblasti-rada.html#privredno">Privredno pravo</a></li>
+                    <li><a href="oblasti-rada.html#prekrsaj">Prekršajni postupak</a></li>
+                    <li><a href="oblasti-rada.html#naknada">Naknada štete</a></li>
+                    <li><a href="oblasti-rada.html#prijava">Prijava stranaca</a></li>
                 </ul> 
             </article>
 
@@ -146,8 +146,7 @@
                 <ul class="footer__list">
                     <li><a href="index.html" class="footer__link">Početna</a></li>
                     <li><a href="biografija.html" class="footer__link">Biografija</a></li>
-                    <li><a href="advokatska-tarifa.html" class="footer__link">Cenovnik</a></li>
-                    <li><a href="#" class="footer__link">Članci</a></li>
+                    <li><a href="index.html#pricing" class="footer__link">Cenovnik</a></li>
                     <li><a href="index.html#contact" class="footer__link">Kontakt</a></li>
                     <li><a href="#" class="footer__link">Politika privatnosti</a></li>
                 </ul>
@@ -170,6 +169,13 @@
         </main>
     </footer>
     <!-- Footer section ends -->
+
+
+
+
+
+    <!-- Scroll to top -->
+    <i class="arrow__up fa-solid fa-chevron-up" id="arrow-up"></i>
 
 
 

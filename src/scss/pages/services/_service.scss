@@ -2,46 +2,44 @@
 
 .service{
 
-
     &__item{
 
-        &--item{
-            background-color: #fff;
+        &--white{ 
+            background-color: $white-color; 
+            
+            .service__info{ order: -1;}
         }
 
         &--primary{
             background-color: $primary-color;
 
             .service__heading,
-            .service__text{
-                color: $white-color;
-            }
+            .service__text{ color: $white-color; }
         }
     }
 
     &__wrapper{
         display: flex;
         gap: 5rem;
+
+        @include rwd(1200){
+            flex-direction: column
+        }
     }
 
     &__img{ 
+        @include flex(center, center, column);
         flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         background-color: #D9D9D9;
         padding: 2rem 0;
 
         img{
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
         }
     }
 
-    &__info{
-        flex: 2;
-    }
+    &__info{ flex: 2; }
 
     &__name{
         background-color: #363959B2;
@@ -56,6 +54,8 @@
 
         font-weight: 500;
         font-size: 3rem;
+
+        @include rwd(768){ font-size: 2rem ;}
     }
 
     &__text{

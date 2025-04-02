@@ -2,7 +2,7 @@
 
 .nav{
     @include flex(space-between, center);
-    padding: 1rem 0;
+    padding: 1rem 5%;
 
     &--primary{
         background-color: $primary-color;
@@ -11,23 +11,33 @@
         padding-right: 10%;
     }
 
-    &__img{
-        height: 75px;
-        width: 250px;
-    }
-
     &__list{
         display: flex;
         gap: 1rem;
+        transition: 0.4s linear;
+
+        &.active{ transform: translateX(0); }
+
+        @include rwd(1200){ 
+            @include position(fixed, 0, auto, auto, 0, 250px, 100%);
+            background-color: $primary-color;
+
+            padding-left: 2rem;
+            z-index: 999;
+            flex-direction: column;
+            justify-content: center;
+            transform: translateX(-100%);
+         }
     }
 
     &__item--dropdown{
-        display: flex;
-        align-items: center;
-        gap: 0.2rem;
         position: relative;
 
-        .fa-solid{ font-size: 0.8rem; }
+        .fa-solid{ 
+            font-size: 0.8rem;
+            
+            @include rwd(1200){ display: none; }
+        }
 
         &:hover > .nav__dropdown{
             opacity: 1;
@@ -42,6 +52,7 @@
         text-transform: uppercase;
 
         &:hover{ color: $secondary-color; }
+        &:hover + .fa-solid{ color: $secondary-color; }
     }
 
     &__btn{
@@ -54,26 +65,26 @@
         padding: 10px 1.2rem;
 
         &:hover{
+            color: $white-color;
+
             background: transparent;
-            border: 2px solid $primary-color;
         }
 
-        &--primary{
-            background-color: transparent;
+        &--secondary{
 
             &:hover{
                 background-color: $secondary-color;
                 color: $white-color;
             }
         }
-    
+
+        @include rwd(1200){ display: none; }
     }
 
     &__dropdown{
         position: absolute;
         top: 150%;
         background: #B1AFAF;
-        list-style: none;
         padding: 0.5rem 1rem;
         display: flex;
         flex-direction: column;
@@ -84,12 +95,50 @@
         transform: translateY(-10px);
         transition: 0.4s linear;
 
-        a{ 
-            color: $black-color;
-            
-            &:hover{
-                 color: $secondary-color;
-            }
+        @include rwd(1200){
+            visibility: visible;
+            opacity: 1;
+            position: static;
+            transform: translateY(0);
+            background-color: inherit;
+            padding-left: 1rem;
+            padding-top: 0.5rem;
         }
+
+        a{ 
+            color: $primary-color;
+            
+            &:hover{ color: $secondary-color; }
+            @include rwd(1200){ color: $white-color;}
+        }
+    }
+
+    &__hamburger{
+        color: $white-color;
+
+        transition: 0.4s linear;
+        font-size: 2rem;
+        cursor: pointer;
+        display: none;
+
+        &:hover { color: $secondary-color;}
+
+        @include rwd(1200){ display: block; }
+    }
+
+    &__close{
+        color: $white-color;
+
+        transition: 0.4s linear;
+        display: none;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        font-size: 2rem;
+        cursor: pointer;
+
+        &:hover{ color: $secondary-color; }
+
+        @include rwd(1200){ display: block; }
     }
 }

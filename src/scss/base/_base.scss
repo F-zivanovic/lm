@@ -10,6 +10,8 @@
   border: none;
   outline: none;
   resize: none;
+  // transition: 0.4s linear;
+
 }
 
 html{
@@ -19,11 +21,11 @@ html{
   font-size: 100%;
   overflow-x: hidden;
   line-height: 1.4;
+
+  @include rwd(576){ font-size: 85%; }
 }
 
-h1,h2,h3,h4,h5,h6{
-  font-family: "Playfair Display", serif;
-}
+h1,h2,h3,h4,h5,h6{ font-family: "Playfair Display", serif; }
 
 img {
   max-width: 100%;

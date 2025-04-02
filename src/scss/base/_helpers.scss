@@ -8,6 +8,11 @@
     @include rwd(576){ width: 90%; }
 }
 
+.logo{
+    height: 75px;
+    width: 250px;
+}
+
 .header{
     background-color: $primary-color;
 

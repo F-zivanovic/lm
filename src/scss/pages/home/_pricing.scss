@@ -1,26 +1,31 @@
 @use '../../abstracts/index' as *;
 
 .pricing{
-    background-image: url('../../src/img/price.webp');
+    background-image: url('../../src/img/advokatska-tarifa.webp');
     background-size: cover;
 
     &__wrapper{
         background: #E7E5E5E5;
         text-align: center;
-        padding: 2rem 0;
+        padding: 2rem;
     }
 
     &__heading{
-        font-weight: 500;
-        font-size: 58px;
         color: $primary-color;
+
+        font-weight: 500;
+        font-size: 3.5rem;
+
+        @include rwd(768){ font-size: 2.5rem; }
     }
 
     &__text{
-        color: #717171;
-        max-width: 500px;
+        color: $black-color;
+
+        max-width: 550px;
         margin: 2rem auto;
-        font-size: 17px;
+
+        @include rwd(768){ max-width: 100%; }
     }
 
      &__btn{
@@ -29,12 +34,11 @@
         color: $primary-color;
         background-color: $white-color;
         position: relative;
-        // width: 300px;
         border-radius: 30px;
         padding: 1rem 4.5rem 1rem 2rem;
         border: 1px solid $primary-color;
         display: inline-block;
-        margin-top: 3rem;
+        margin-top: 1rem;
 
         &:hover{
             background-color: $primary-color;

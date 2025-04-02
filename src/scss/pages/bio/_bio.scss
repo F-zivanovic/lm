@@ -5,46 +5,54 @@
 
     &__header{ text-align: center; }
 
+    &__icon{
+        color: $secondary-color;
+
+        font-size: 2.5rem;
+    }
+
     &__heading{
         font-weight: 500;
         font-size: 3rem;
+        margin-top: 1rem;
+
+        @include rwd(768){ font-size: 2rem }
     }
 
     &__wrapper{
-        display: flex;
-        justify-content: space-between;
+        @include flex(space-between, stretch, wrap);
+        row-gap: 3rem;
         margin-top: 3rem;
+
+        span{
+            color: $secondary-color;
+            
+            text-align: center;
+            display: block;
+            margin: 1rem 0;
+            font-size: 0.8rem;
+        }
     }
 
     &__item{
         flex: 0 0 45%;
 
+        @include rwd(1200){ flex: 0 0 100%;}
+
         &--img{
             position: relative;
             z-index: 1;
-
+               
             &::after{
-                position: absolute;
+                @include position(absolute, 1rem, auto, auto, 1rem, 100%, 100%);
                 background: #EADEC7;
                 border-radius: 15px;
-                top: 5%;
-                left: 5%;
                 display: block;
                 content: "";
-                width: 90%;
-                height: 100%;
                 z-index: -1;
             }
-        }
-    }
 
-    &__icon{
-        text-align: center;
-        margin: 1rem 0;
-
-        img{
-            width: 10px;
-            height: 10px;
+            @include rwd(1200){ order: 2;}
         }
     }
 
