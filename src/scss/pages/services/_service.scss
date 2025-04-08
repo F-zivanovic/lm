@@ -7,7 +7,7 @@
         &--white{ 
             background-color: $white-color; 
             
-            .service__info{ order: -1;}
+            .service__info{ @include rwd(1200){ order: -1;} }
         }
 
         &--primary{
@@ -20,33 +20,19 @@
 
     &__wrapper{
         display: flex;
+        align-items: center;
         gap: 5rem;
 
-        @include rwd(1200){
-            flex-direction: column
+        @include rwd(1200){ flex-direction: column; }
+
+        &.container{
+             width: 70%;
         }
     }
 
     &__img{ 
-        @include flex(center, center, column);
-        flex: 1;
-        background-color: #D9D9D9;
-        padding: 2rem 0;
-
-        img{
-            width: 80px;
-            height: 80px;
-        }
-    }
-
-    &__info{ flex: 2; }
-
-    &__name{
-        background-color: #363959B2;
-        padding: 0.5rem 2rem;
-        font-style: italic;
-        font-weight: 600;
-        margin-top: 1rem;
+        width: 180px;
+        height: 180px;
     }
 
     &__heading{

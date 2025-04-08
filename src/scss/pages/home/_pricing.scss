@@ -1,8 +1,10 @@
 @use '../../abstracts/index' as *;
 
 .pricing{
+    padding: 100px 0;
     background-image: url('../../src/img/advokatska-tarifa.webp');
     background-size: cover;
+    background-position: center;
 
     &__wrapper{
         background: #E7E5E5E5;

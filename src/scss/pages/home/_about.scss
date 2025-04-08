@@ -4,7 +4,7 @@
 .about{
     color: $primary-color;
 
-    padding-bottom: 0;
+    padding: 170px 0;
 
     &__wrapper{
         @include flex(space-between, stretch, wrap);
@@ -18,9 +18,11 @@
 
         &--img{
             position: relative;
+            width: 480px;
+            height: 720px;
 
             &::after{
-                @include position(absolute, 1rem, auto, auto, 1rem, 100%, 100%);
+                @include position(absolute, 1.5rem, auto, auto, 1.5rem, 480px, 100%);
                 background: #B98E444D;
                 border-radius: 15px;
                 display: block;
@@ -35,6 +37,7 @@
     &__badge{
         background-color: $white-color;
 
+        font-family: "Playfair Display", serif; 
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -42,6 +45,7 @@
         border-radius: 10px;
         bottom: 50px;
         width: 200px;
+        height: 240px;
         left: -100px;
         border: 1px solid $secondary-color;
         font-weight: 500;
@@ -60,19 +64,20 @@
         }
 
         span{ 
+            font-weight: 500;
             font-size: 1.5rem;
             text-align: center;
             
             @include rwd(768){ font-size: 1rem }
         }
+    }
 
-        .about__circle{
-            @include position(absolute, -10px, auto, auto, -30px, 130px, 130px);
-            background-color: $secondary-color;
+    &__circle{
+        @include position(absolute, -20px, auto, auto, -70px, 183px, 177px);
+        background-color: $secondary-color;
 
-            border-radius: 50%;
-            z-index: -1;
-        }
+        border-radius: 50%;
+        z-index: -1;
     }
 
     &__icon{
@@ -98,6 +103,7 @@
     }
 
     &__list{
+        margin: 3rem 0;
         display: flex;
         flex-direction: column;
         gap: 1rem;

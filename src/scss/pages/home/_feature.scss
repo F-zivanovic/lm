@@ -75,19 +75,35 @@
     }
 
     &__info{
+        flex: 1;
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: 2rem;
     }
 
     &__circle{
+        background-color: $white-color;
+        color: $primary-color;
+
+        position: relative;
         width: 60px;
         height: 60px;
         line-height: 60px;
-        background-color: $white-color;
         text-align: center;
-        color: $primary-color;
         font-weight: 700;
         border-radius: 50%;
+
+        &::after{
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            content: "";
+            top: -6px;
+            left: -6px;
+            line-height: 70px;
+            border-radius: 50%;
+      
+            border: 2px solid $white-color;
+        }
     }
 }
