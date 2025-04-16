@@ -2,11 +2,14 @@
 
 .feature{
     background-color: $primary-color;
+    padding-top: 120px;
+
+    @include rwd(1200){ padding: 70px 0;}
    
     &__wrapper{
         display: flex;
         align-items: center;
-        gap: 6rem;
+        gap: 10rem;
 
         @include rwd(1200){ 
             flex-direction: column;
@@ -30,8 +33,8 @@
 
         &--front{
             position: absolute;
-            top: -30px;
-            left: 40px;
+            bottom: 50px;
+            left: 70px;
         }
     }
 
@@ -44,10 +47,11 @@
         margin-bottom: 1rem;
 
         &:after{
+            background-color: $secondary-color;
+
             display: block;
             content: "";
             height: 2px;
-            background-color: $secondary-color;
         }
     }
 
@@ -68,7 +72,7 @@
 
     &__box{
         display: flex;
-        margin-top: 3rem;
+        margin-top: 5rem;
         row-gap: 2rem;
 
         @include rwd(1300){ flex-direction: column; }
@@ -82,24 +86,17 @@
     }
 
     &__circle{
-        background-color: $white-color;
+        @include circle(60px);
         color: $primary-color;
 
-        position: relative;
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
-        text-align: center;
         font-weight: 700;
-        border-radius: 50%;
 
         &::after{
-            position: absolute;
+            @include position-center;
+
             width: 70px;
             height: 70px;
             content: "";
-            top: -6px;
-            left: -6px;
             line-height: 70px;
             border-radius: 50%;
       

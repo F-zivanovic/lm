@@ -3,13 +3,11 @@
 
 .about{
     color: $primary-color;
-
+    @include flex(space-between, stretch, wrap);
+    
+    row-gap: 3rem;
     padding: 170px 0;
 
-    &__wrapper{
-        @include flex(space-between, stretch, wrap);
-        row-gap: 3rem;
-    }
 
     &__item{
         flex: 0 0 45%;
@@ -18,11 +16,10 @@
 
         &--img{
             position: relative;
-            width: 480px;
-            height: 720px;
 
             &::after{
-                @include position(absolute, 1.5rem, auto, auto, 1.5rem, 480px, 100%);
+                @include position(absolute, 1rem, auto, auto, 1rem, 100%, 800px);
+
                 background: #B98E444D;
                 border-radius: 15px;
                 display: block;
@@ -34,41 +31,41 @@
         }
     }
 
+    &__img{
+        height: 800px;
+        width: 100%;
+    }
+
     &__badge{
         background-color: $white-color;
-
-        font-family: "Playfair Display", serif; 
+        @include position(absolute, auto, auto, 50px, -100px, 200px, 240px);
+        
         display: flex;
         flex-direction: column;
         align-items: center;
-        position: absolute;
         border-radius: 10px;
-        bottom: 50px;
-        width: 200px;
-        height: 240px;
-        left: -100px;
         border: 1px solid $secondary-color;
+        z-index: 12;
+        overflow: hidden;
         font-weight: 500;
         font-style: italic;
         font-size: 7rem;
-        z-index: 12;
-        overflow: hidden;
+        font-family: "Playfair Display", serif; 
+        
 
-        @include rwd(768){
+        @include rwd(992){
             top: 1rem;
             right: 1rem;
             left: auto;
             bottom: auto;
             font-size: 4rem;
-            width: 100px;
+            height: auto;
         }
 
         span{ 
             font-weight: 500;
             font-size: 1.5rem;
             text-align: center;
-            
-            @include rwd(768){ font-size: 1rem }
         }
     }
 
@@ -81,9 +78,8 @@
     }
 
     &__icon{
-        color: $secondary-color;
-
-        font-size: 2.5rem;
+        width: 80px;
+        height: 80px;
     }
 
     &__heading{
@@ -150,36 +146,6 @@
             top: 50%;
             right: 10px;
             font-size: 1rem;
-        }
-    }
-
-    &__quote{
-        margin-top: 1rem;
-        background: #B98E441F;
-        padding: 2rem;
-        text-align: center;
-        font-weight: 500;
-        font-size: 25px;
-        font-style: italic;
-        position: relative;
-
-        P{ 
-            display: inline-block;
-            
-            @include rwd(768){ font-size: 0.8rem;}
-        }
-
-        .about__arrow{
-            width: 50px;
-            height: 20px;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-            
-            &--left{ left: 20px;}
-
-            &--right{right: 20px;}
         }
     }
 

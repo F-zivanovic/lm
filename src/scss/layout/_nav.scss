@@ -2,7 +2,8 @@
 
 .nav{
     @include flex(space-between, center);
-    padding: 1rem 5%;
+    padding: 1rem 0;
+
 
     &--primary{
         background-color: $primary-color;
@@ -109,7 +110,6 @@
             color: $primary-color;
             
             &:hover{ color: $secondary-color; }
-            @include rwd(1200){ color: $white-color;}
 
             &::after{
                 display: block;
@@ -117,6 +117,8 @@
                 border: 1px solid #00000033;
                 content: "";
             }
+
+            @include rwd(1200){ color: $white-color;}
         }
     }
 

@@ -83,7 +83,7 @@ a:focus-visible {
   align-items: center;
   flex-flow: row nowrap;
   gap: 0;
-  padding: 1rem 5%;
+  padding: 1rem 0;
 }
 .nav--primary {
   background-color: #363959;
@@ -193,16 +193,16 @@ a:focus-visible {
 .nav__dropdown a:hover {
   color: #B98E44;
 }
-@media (max-width: 1200px) {
-  .nav__dropdown a {
-    color: #fff;
-  }
-}
 .nav__dropdown a::after {
   display: block;
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.2);
   content: "";
+}
+@media (max-width: 1200px) {
+  .nav__dropdown a {
+    color: #fff;
+  }
 }
 .nav__hamburger {
   color: #fff;
@@ -244,15 +244,16 @@ a:focus-visible {
 }
 .footer__wrapper {
   display: flex;
+  justify-content: space-between;
   row-gap: 2rem;
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .footer__wrapper {
     flex-direction: column;
   }
 }
 .footer__item {
-  flex: 1;
+  flex: 0 0 22%;
 }
 .footer__heading {
   font-size: 1.1rem;
@@ -267,6 +268,10 @@ a:focus-visible {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+.footer__list--space li {
+  display: flex;
+  justify-content: space-between;
 }
 .footer__social {
   margin-top: 2rem;
@@ -293,6 +298,7 @@ a:focus-visible {
   transform: translateX(200px);
   transition: 0.4s linear;
   cursor: pointer;
+  z-index: 100;
 }
 .arrow__up:hover {
   background: transparent;
@@ -302,9 +308,8 @@ a:focus-visible {
 }
 
 .hero {
-  background: linear-gradient(269.88deg, rgba(38, 34, 34, 0) 0.1%, rgba(33, 32, 32, 0.91) 99.89%), url("../../src/img/hero-bg.webp");
-  background-size: cover;
-  height: 100vh;
+  background: linear-gradient(269.88deg, rgba(38, 34, 34, 0) 0.1%, rgba(33, 32, 32, 0.91) 99.89%), url("../../src/img/advokatska-kancelarija.webp"), center/cover;
+  height: 100svh;
   padding: 0;
 }
 .hero__wrapper {
@@ -326,11 +331,7 @@ a:focus-visible {
   color: #B98E44;
   font-size: 1.5rem;
   display: inline-block;
-}
-@media (max-width: 576px) {
-  .hero__subheading {
-    font-size: 1.2rem;
-  }
+  font-weight: 500;
 }
 .hero__subheading::after {
   background-color: #B98E44;
@@ -338,6 +339,11 @@ a:focus-visible {
   content: "";
   width: 100%;
   height: 1px;
+}
+@media (max-width: 576px) {
+  .hero__subheading {
+    font-size: 1.2rem;
+  }
 }
 .hero__heading {
   font-size: clamp(2.5rem, 8vw, 4.5rem);
@@ -348,10 +354,10 @@ a:focus-visible {
   font-style: italic;
 }
 .hero__btn {
-  font-weight: 500;
-  font-size: 1.1rem;
   color: #363959;
   background-color: #fff;
+  font-weight: 500;
+  font-size: 1.1rem;
   position: relative;
   border-radius: 30px;
   padding: 1rem 3.5rem 1rem 2rem;
@@ -364,10 +370,11 @@ a:focus-visible {
   background: rgba(255, 255, 255, 0.2);
 }
 .hero__btn .fa-solid {
-  transform: translateY(-50%);
-  position: absolute;
   background-color: #363959;
   color: #fff;
+  transition: 0.4s linear;
+  transform: translateY(-50%);
+  position: absolute;
   border-radius: 50%;
   width: 35px;
   height: 35px;
@@ -380,15 +387,13 @@ a:focus-visible {
 
 .about {
   color: #363959;
-  padding: 170px 0;
-}
-.about__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   flex-flow: wrap;
   gap: 0;
   row-gap: 3rem;
+  padding: 170px 0;
 }
 .about__item {
   flex: 0 0 45%;
@@ -400,17 +405,15 @@ a:focus-visible {
 }
 .about__item--img {
   position: relative;
-  width: 480px;
-  height: 720px;
 }
 .about__item--img::after {
   position: absolute;
-  top: 1.5rem;
+  top: 1rem;
   right: auto;
   bottom: auto;
-  left: 1.5rem;
-  width: 480px;
-  height: 100%;
+  left: 1rem;
+  width: 100%;
+  height: 800px;
   background: rgba(185, 142, 68, 0.3019607843);
   border-radius: 15px;
   display: block;
@@ -422,44 +425,45 @@ a:focus-visible {
     order: 2;
   }
 }
+.about__img {
+  height: 800px;
+  width: 100%;
+}
 .about__badge {
   background-color: #fff;
-  font-family: "Playfair Display", serif;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 50px;
+  left: -100px;
+  width: 200px;
+  height: 240px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
   border-radius: 10px;
-  bottom: 50px;
-  width: 200px;
-  height: 240px;
-  left: -100px;
   border: 1px solid #B98E44;
+  z-index: 12;
+  overflow: hidden;
   font-weight: 500;
   font-style: italic;
   font-size: 7rem;
-  z-index: 12;
-  overflow: hidden;
+  font-family: "Playfair Display", serif;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .about__badge {
     top: 1rem;
     right: 1rem;
     left: auto;
     bottom: auto;
     font-size: 4rem;
-    width: 100px;
+    height: auto;
   }
 }
 .about__badge span {
   font-weight: 500;
   font-size: 1.5rem;
   text-align: center;
-}
-@media (max-width: 768px) {
-  .about__badge span {
-    font-size: 1rem;
-  }
 }
 .about__circle {
   position: absolute;
@@ -474,8 +478,8 @@ a:focus-visible {
   z-index: -1;
 }
 .about__icon {
-  color: #B98E44;
-  font-size: 2.5rem;
+  width: 80px;
+  height: 80px;
 }
 .about__heading {
   font-weight: 500;
@@ -540,44 +544,10 @@ a:focus-visible {
   right: 10px;
   font-size: 1rem;
 }
-.about__quote {
-  margin-top: 1rem;
-  background: rgba(185, 142, 68, 0.1215686275);
-  padding: 2rem;
-  text-align: center;
-  font-weight: 500;
-  font-size: 25px;
-  font-style: italic;
-  position: relative;
-}
-.about__quote P {
-  display: inline-block;
-}
-@media (max-width: 768px) {
-  .about__quote P {
-    font-size: 0.8rem;
-  }
-}
-.about__quote .about__arrow {
-  width: 50px;
-  height: 20px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-.about__quote .about__arrow--left {
-  left: 20px;
-}
-.about__quote .about__arrow--right {
-  right: 20px;
-}
 
 .services {
   padding: 120px 0;
-  background-image: linear-gradient(rgba(54, 57, 89, 0.8), rgba(54, 57, 89, 0.8)), url("../../src/img/services-bg.webp");
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(rgba(54, 57, 89, 0.8), rgba(54, 57, 89, 0.8)), url("../../src/img/advokat-beograd.webp") center/cover;
   text-align: center;
 }
 .services__heading {
@@ -586,7 +556,7 @@ a:focus-visible {
   font-size: 1.3rem;
   display: inline-block;
 }
-.services__heading:after {
+.services__heading::after {
   background-color: #B98E44;
   height: 1px;
   display: block;
@@ -641,20 +611,39 @@ a:focus-visible {
   }
 }
 .services__img {
-  background-color: #fff;
   width: 140px;
   height: 140px;
   line-height: 140px;
-  border-radius: 50%;
+  background-color: #fff;
   text-align: center;
+  border-radius: 50%;
+  position: relative;
+}
+.services__img:hover::after {
+  border: 2px solid #B98E44;
+  transition: 0.4s linear;
+}
+.services__img::after {
+  transition: 0.4s linear;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 130px;
+  height: 130px;
+  line-height: 130px;
+  border-radius: 50%;
+  content: "";
+  border: 2px solid rgba(54, 57, 89, 0.6509803922);
 }
 .services__img img {
   width: 80px;
   height: 80px;
 }
-.services P {
+.services__title {
   font-weight: 600;
   margin-top: 1rem;
+  font-family: "DM Sans", sans-serif;
 }
 .services__btn {
   font-weight: 500;
@@ -691,9 +680,7 @@ a:focus-visible {
 
 .pricing {
   padding: 100px 0;
-  background-image: url("../../src/img/advokatska-tarifa.webp");
-  background-size: cover;
-  background-position: center;
+  background: url("../../src/img/advokatska-tarifa.webp") center/cover;
 }
 .pricing__wrapper {
   background: rgba(231, 229, 229, 0.8980392157);
@@ -738,6 +725,7 @@ a:focus-visible {
 }
 .pricing__btn:hover > .fa-solid {
   background: rgba(255, 255, 255, 0.2);
+  color: #fff;
 }
 .pricing__btn .fa-solid {
   transform: translateY(-50%);
@@ -757,11 +745,17 @@ a:focus-visible {
 
 .feature {
   background-color: #363959;
+  padding-top: 120px;
+}
+@media (max-width: 1200px) {
+  .feature {
+    padding: 70px 0;
+  }
 }
 .feature__wrapper {
   display: flex;
   align-items: center;
-  gap: 6rem;
+  gap: 10rem;
 }
 @media (max-width: 1200px) {
   .feature__wrapper {
@@ -788,8 +782,8 @@ a:focus-visible {
 }
 .feature__img--front {
   position: absolute;
-  top: -30px;
-  left: 40px;
+  bottom: 50px;
+  left: 70px;
 }
 .feature__heading {
   color: #B98E44;
@@ -799,10 +793,10 @@ a:focus-visible {
   margin-bottom: 1rem;
 }
 .feature__heading:after {
+  background-color: #B98E44;
   display: block;
   content: "";
   height: 2px;
-  background-color: #B98E44;
 }
 .feature__subheading {
   font-weight: 500;
@@ -821,7 +815,7 @@ a:focus-visible {
 }
 .feature__box {
   display: flex;
-  margin-top: 3rem;
+  margin-top: 5rem;
   row-gap: 2rem;
 }
 @media (max-width: 1300px) {
@@ -836,23 +830,24 @@ a:focus-visible {
   gap: 2rem;
 }
 .feature__circle {
-  background-color: #fff;
-  color: #363959;
-  position: relative;
   width: 60px;
   height: 60px;
   line-height: 60px;
+  background-color: #fff;
   text-align: center;
-  font-weight: 700;
   border-radius: 50%;
+  position: relative;
+  color: #363959;
+  font-weight: 700;
 }
 .feature__circle::after {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 70px;
   height: 70px;
   content: "";
-  top: -6px;
-  left: -6px;
   line-height: 70px;
   border-radius: 50%;
   border: 2px solid #fff;
@@ -869,20 +864,14 @@ a:focus-visible {
 }
 .contact__item {
   flex: 1;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  padding-left: 10%;
 }
 .contact__item--form {
-  background-image: linear-gradient(rgba(54, 57, 89, 0.8), rgba(54, 57, 89, 0.8)), url("../../src/img/advokat-beograd-kontakt.webp");
-  background-size: cover;
-  padding: 70px 3rem;
+  background: linear-gradient(rgba(54, 57, 89, 0.8), rgba(54, 57, 89, 0.8)), url("../../src/img/advokat-beograd-kontakt.webp") center/cover;
   text-align: center;
-}
-.contact__item--text {
-  padding: 70px 5rem;
-}
-@media (max-width: 576px) {
-  .contact__item--text {
-    padding: 70px 2rem;
-  }
+  padding-right: 10%;
 }
 .contact__heading {
   color: #363959;
@@ -965,8 +954,8 @@ a:focus-visible {
   text-align: center;
 }
 .bio__icon {
-  color: #B98E44;
-  font-size: 2.5rem;
+  width: 80px;
+  height: 80px;
 }
 .bio__heading {
   font-weight: 500;
@@ -1013,7 +1002,7 @@ a:focus-visible {
   bottom: auto;
   left: 1rem;
   width: 100%;
-  height: 100%;
+  height: 800px;
   background: #EADEC7;
   border-radius: 15px;
   display: block;
@@ -1024,6 +1013,10 @@ a:focus-visible {
   .bio__item--img {
     order: 2;
   }
+}
+.bio__img {
+  height: 800px;
+  width: 100%;
 }
 .bio__text {
   text-align: justify;

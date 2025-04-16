@@ -6,9 +6,8 @@
     &__header{ text-align: center; }
 
     &__icon{
-        color: $secondary-color;
-
-        font-size: 2.5rem;
+        width: 80px;
+        height: 80px;
     }
 
     &__heading{
@@ -44,7 +43,8 @@
             z-index: 1;
                
             &::after{
-                @include position(absolute, 1rem, auto, auto, 1rem, 100%, 100%);
+                @include position(absolute, 1rem, auto, auto, 1rem, 100%, 800px);
+                
                 background: #EADEC7;
                 border-radius: 15px;
                 display: block;
@@ -54,6 +54,11 @@
 
             @include rwd(1200){ order: 2;}
         }
+    }
+
+    &__img{
+        height: 800px;
+        width: 100%;
     }
 
     &__text{ 

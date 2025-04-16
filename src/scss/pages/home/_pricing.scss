@@ -2,9 +2,7 @@
 
 .pricing{
     padding: 100px 0;
-    background-image: url('../../src/img/advokatska-tarifa.webp');
-    background-size: cover;
-    background-position: center;
+    background: url('../../src/img/advokatska-tarifa.webp') center/cover;
 
     &__wrapper{
         background: #E7E5E5E5;
@@ -49,6 +47,7 @@
 
         &:hover > .fa-solid{
             background: rgba(255, 255, 255, 0.2);
+            color: $white-color;
         }
 
         .fa-solid{

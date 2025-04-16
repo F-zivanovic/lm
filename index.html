@@ -7,6 +7,10 @@
 
     <link rel="shortcut icon" href="src/img/advokatska-kancelarija-logo.png" type="image/x-icon">
 
+    <meta name="description" content="
+    Personalizovan i posvećen pristup svakom klijentu. Dobićete brza i detaljno prilagođena pravna rešenja i savete.">
+    <link rel="canonical" href="">
+
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,14 +30,14 @@
     <!-- Hero section starts -->
     <section class="hero">
 
-        <!-- Nav section -->
-         <nav class="nav">
+        <!-- Nav section starts-->
+         <nav class="nav container">
 
             <a href="index.html">
-                <img src="src/img/advokatska-kancelarija-logo.png" 
+                <img src="src/img/advokatska-kancelarija-logo.webp" 
                      alt="Advokatska kancelarija Miljanić Beograd - logo"
-                     class="logo"
-                     height="75px"width="250px">
+                     height="75px" width="250px"
+                     class="logo">
             </a>
 
             <ul class="nav__list" id="nav-list">
@@ -60,8 +64,8 @@
             <a href="tel:+381607200026" class="nav__btn">+381607200026</a>
 
             <span class="fa-solid fa-bars nav__hamburger" id="hamburger"></span>
-
          </nav>
+         <!-- Nav section ends -->
 
          <div class="hero__wrapper container">
             <p class="hero__subheading">Efektivna pravna rešenja</p>
@@ -79,49 +83,54 @@
 
 
     <!-- About section starts -->
-    <section class="about" >
-        <main class="about__wrapper container">
+    <section class="about container">
 
-            <article class="about__item about__item--img">
+        <article class="about__item about__item--img">
                 <img src="src/img/luka-miljanic.webp" 
                      alt="Advokat Beograd - Luka Miljanić" 
+                     width="100%" height="800px"
                      class="about__img"
-                     width="480px" height="720px"
                      loading="lazy">
+
                 <div class="about__badge">10 
                     <span>godina iskustva</span>
                     <div class="about__circle"></div>
                 </div>
-            </article>
+        </article>
 
-            <article class="about__item">
+        <article class="about__item">
                 <img src="src/img/advokatska-kancelarija-beograd.webp" 
-                     alt="Advokatska kancelarija Miljanić Beograd"
+                     alt="Advokatska kancelarija Beograd"
                      width="76px" height="83px"
+                     class="about__icon"
                      loading="lazy">
                 <h2 class="about__heading">Luka Miljanić</h2>
                 <h3 class="about__subheading">advokat</h3>
+
                 <ul class="about__list">
                     <li>
                         <img src="src/img/checkmark-circle.png" 
-                             alt="Advokatska kancelarija Miljanic Beograd" 
+                             alt="Advokatska kancelarija Beograd" 
                              width="20px" height="20px" 
+                             loading="lazy"
                              aria-hidden="true">
                         Advokat posvećen pružanju strateških pravnih saveta i zastupanju klijenata pred sudovima i državnim organima.
                     </li>
     
                     <li>
                         <img src="src/img/checkmark-circle.png" 
-                             alt="Advokatska kancelarija Miljanic Beograd" 
+                             alt="Advokatska kancelarija Beograd" 
                              width="20px" height="20px" 
+                             loading="lazy"
                              aria-hidden="true">
                         Sa iskustvom u advokaturi i pravnim procedurama, svojim klijentima nudi stručnost, analitičnost i posvećenost u rešavanju pravnih izazova.
                     </li>
     
                     <li>
                         <img src="src/img/checkmark-circle.png" 
-                             alt="Advokatska kancelarija Miljanic Beograd" 
+                             alt="Advokatska kancelarija Beograd" 
                              width="20px" height="20px" 
+                             loading="lazy"
                              aria-hidden="true">
                         Njegov profesionalni pristup kombinuje pravno znanje, transparentnu komunikaciju i rešenja prilagođena specifičnim potrebama klijenta.
                     </li>
@@ -130,14 +139,8 @@
                 <a href="biografija.html" class="about__btn">
                     Detaljnije <span class="fa-solid fa-arrow-right" aria-hidden="true"></span>
                 </a>
-            </article>
-        </main>
+        </article>
 
-        <!-- <div class="about__quote">
-          
-            <p id="quote">“Gde postoji pravo, postoji i pravni lek.”</p>
-          
-        </div> -->
     </section>
     <!-- About section ends -->
 
@@ -164,7 +167,7 @@
                          width="80px" height="80px"
                          loading="lazy">
                 </div>
-                <p>Upis u katastar</p>
+                <h4 class="services__title">Upis u katastar</h4>
             </a>
 
             <a href="oblasti-rada.html#nepokretnosti" class="services__item">
@@ -174,7 +177,7 @@
                          width="80px" height="80px"
                          loading="lazy">
                 </div>
-                <p>Nepokretnosti</p>
+                <h4 class="services__title">Nepokretnosti</h4>
             </a>
 
             <a href="oblasti-rada.html#obligaciono" class="services__item">
@@ -184,7 +187,7 @@
                          width="80px" height="80px"
                          loading="lazy">
                 </div>
-                <p>Obligaciono pravo</p>
+                <h4 class="services__title">Obligaciono pravo</h4>
             </a>
 
             <a href="oblasti-rada.html#prekrsaj" class="services__item">
@@ -194,7 +197,7 @@
                          width="80px" height="80px"
                          loading="lazy">
                 </div>
-                <p>Prekršajni postupak</p>
+                <h4 class="services__title">Prekršajni postupak</h4>
             </a>
 
           </main>
@@ -234,11 +237,20 @@
 
     <!-- Feature section starts -->
     <section class="feature">
-        <div class="feature__wrapper container">
+        <main class="feature__wrapper container">
 
             <article class="feature__item feature__item--bg">
-                <img src="src/img/feature-1.webp" alt="" class="feature__img--back">
-                <img src="src/img/feature.webp" alt="" class="feature__img--front">
+                <img src="src/img/advokati-beograd.webp" 
+                     alt="Advokatska kancelarija Beograd"
+                     width="100%" height="auto"
+                     class="feature__img--back"
+                     loading="lazy">
+
+                <img src="src/img/advokat.webp" 
+                     alt="Advokatska kancelarija Beograd"
+                     width="100%" height="auto"
+                     class="feature__img--front"
+                     loading="lazy">
             </article>
 
             <article class="feature__item">
@@ -247,7 +259,6 @@
                 <p class="feature__text">Sa bogatim iskustvom i stručnošću, pružam pravnu podršku i vodim vas kroz složenosti pravnog sistema, štiteći vaša prava i interese.</p>
 
                 <div class="feature__box">
-
                     <div class="feature__info">
                         <div class="feature__circle">100%</div>
                         <div class="feature__desc">Posvećenost <br> klijentima</div>
@@ -262,12 +273,10 @@
                         <div class="feature__circle">98%</div>
                         <div class="feature__desc">Uspešno rešenih <br> slučajeva</div>
                     </div>
-
                 </div>
-                
             </article>
 
-        </div>
+        </main>
     </section>
     <!-- Feature section ends -->
 
@@ -278,7 +287,7 @@
     <!-- Contact section starts -->
     <section class="contact" id="contact">
 
-        <article class="contact__item contact__item--text">
+        <article class="contact__item">
             <h2 class="contact__heading">Kontakt podaci</h2>
 
             <ul class="contact__list">
@@ -336,6 +345,46 @@
             </article>
 
             <article class="footer__item">
+                <p class="footer__heading">Radno vreme</p>
+                <ul class="footer__list footer__list--space">
+                    <li>
+                        <span>Ponedeljak</span>
+                        <span>09-17h</span>
+                    </li>
+    
+                    <li>
+                        <span>Utorak</span>
+                        <span>09-17h</span>
+                    </li>
+                    <li>
+                        <span>Sreda</span>
+                        <span>09-17h</span>
+                    </li>
+    
+                    <li>
+                        <span>Četvrtak</span>
+                        <span>09-17h</span>
+                    </li>
+    
+                    <li>
+                        <span>Petak</span>
+                        <span>09-17h</span>
+                    </li>
+    
+                    <li>
+                        <span>Subota</span>
+                        <span>Neradan dan</span>
+                    </li>
+    
+                    <li>
+                        <span>Nedelja</span>
+                        <span>Neradan dan</span>
+                    </li>
+        
+                </ul>
+            </article>
+
+            <article class="footer__item">
                 <p class="footer__heading">Linkovi</p>
                 <ul class="footer__list">
                     <li><a href="index.html" class="footer__link">Početna</a></li>
@@ -355,7 +404,6 @@
                 <div class="footer__social">
                     <a href="#"><span class="fa-brands fa-facebook-f"></span></a>
                     <a href="#"><span class="fa-brands fa-instagram"></span></a>
-                    <a href="#"><span class="fa-brands fa-twitter"></span></a>
                     <a href="#"><span class="fa-brands fa-whatsapp"></span></a>
                 </div>
             </article>
@@ -377,6 +425,5 @@
 
     <!-- Custom JS -->
     <script src="src/js/main.js"></script>
-    <script src="src/js/quote-slider.js"></script>
 </body>
 </html>

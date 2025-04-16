@@ -1,18 +1,18 @@
 
-// 2. Base stuff
+// Base stuff
 @use 'base/base';
 @use 'base/helpers';
 
-// 3. Layout-related sections
+// Layout-related sections
 @use 'layout/nav';
 @use 'layout/footer';
 
-// 4. Components
+//Components
 @use 'components/button';
 @use 'components/arrow-up';
+@use 'components/circle-box';
 
-
-// 5. Pages
+//Pages
 @use 'pages/home/hero';
 @use 'pages/home/about';
 @use 'pages/home/services';

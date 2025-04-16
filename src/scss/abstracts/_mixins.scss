@@ -8,15 +8,7 @@
   gap: $gap;
 }
 
-@mixin position(
-  $position: absolute,
-  $top: auto,
-  $right: auto,
-  $bottom: auto,
-  $left: auto,
-  $width: auto,
-  $height: auto
-) {
+@mixin position( $position: absolute, $top: auto, $right: auto, $bottom: auto, $left: auto, $width: auto, $height: auto) {
   position: $position;
   top: $top;
   right: $right;
@@ -27,15 +19,39 @@
 
   @if ($left == 50% and $top == 50%) {
     transform: translate(-50%, -50%);
-  } @else if($top == 50%) {
+  } 
+
+  @else if($top == 50%) {
     transform: translateY(-50%);
-  } @else if($left == 50%) {
+  } 
+
+  @else if($left == 50%) {
     transform: translateX(-50%);
-  } @else if($right == 50%) {
+  } 
+
+  @else if($right == 50%) {
     transform: translateX(-50%);
   }
 }
 
+
+@mixin position-center(){
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin circle($unit, $bg:$white-color){
+  width: $unit;
+  height: $unit;
+  line-height: $unit;
+  background-color: $bg;
+
+  text-align: center;
+  border-radius: 50%;
+  position: relative;
+}
 
 @mixin rwd($pixels, $type: max) {
   @media (#{$type}-width: #{$pixels}px) {

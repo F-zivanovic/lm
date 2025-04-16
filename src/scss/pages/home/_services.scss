@@ -2,10 +2,8 @@
 
 .services{
     padding: 120px 0;
-    background-image: linear-gradient(rgba(54, 57, 89, 0.8), rgba(54, 57, 89, 0.8)),
-                      url('../../src/img/services-bg.webp');
-    background-size: cover;
-    background-position: center;
+    background:linear-gradient(rgba(54, 57, 89, 0.8), rgba(54, 57, 89, 0.8)), 
+               url('../../src/img/advokat-beograd.webp') center/cover;
     text-align: center;
 
     &__heading{
@@ -15,7 +13,7 @@
         font-size: 1.3rem;
         display: inline-block;
 
-        &:after{
+        &::after{
             background-color: $secondary-color;
 
             height: 1px;
@@ -61,13 +59,24 @@
     }
 
     &__img{
-        background-color: $white-color;
+        @include circle(140px);
 
-        width: 140px;
-        height: 140px;
-        line-height: 140px;
-        border-radius: 50%;
-        text-align: center;
+        &:hover::after{
+            border: 2px solid $secondary-color;
+            transition: 0.4s linear;
+        }
+
+        &::after{
+            transition: 0.4s linear;
+
+            @include position-center;
+            width: 130px;
+            height: 130px;
+            line-height: 130px;
+            border-radius: 50%;
+            content: "";
+            border: 2px solid #363959A6;
+        }
 
         img{
             width: 80px;
@@ -75,9 +84,10 @@
         }
     }
 
-    P{
+    &__title{
         font-weight: 600;
         margin-top: 1rem;
+        font-family: "DM Sans", sans-serif;
     }
 
     &__btn{

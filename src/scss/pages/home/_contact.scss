@@ -8,19 +8,15 @@
 
     &__item{
         flex: 1;
+        padding-top: 70px;
+        padding-bottom: 70px;
+        padding-left: 10%;
 
         &--form{
-            background-image: linear-gradient(rgba(54, 57, 89, 0.8), rgba(54, 57, 89, 0.8)),
-            url('../../src/img/advokat-beograd-kontakt.webp');
-            background-size: cover;
-            padding: 70px 3rem;
+            background: linear-gradient(rgba(54, 57, 89, 0.8), rgba(54, 57, 89, 0.8)),
+                        url('../../src/img/advokat-beograd-kontakt.webp') center/cover;
             text-align: center;
-        }
-
-        &--text{ 
-            padding: 70px 5rem;
-            
-            @include rwd(576){ padding: 70px 2rem; }
+            padding-right:10%;
         }
     }
 
