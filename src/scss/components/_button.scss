@@ -1,3 +1,31 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the button component.
-// -----------------------------------------------------------------------------
+@use '../abstracts/index' as *;
+
+
+[class$="btn"] {
+        color: $primary-color;
+        background-color: $white-color;
+
+        display: inline-block;
+        font-weight: 500;
+        font-size: 1.1rem;
+        position: relative;
+        border-radius: 30px;
+        padding: 1rem 3.5rem 1rem 2rem;
+
+        &:hover{
+            background-color: $primary-color;
+            color: $white-color;
+        }
+
+        &:hover > .fa-solid{ background: rgba(255, 255, 255, 0.2); }
+
+        .fa-solid{
+            @include circle(35px, $primary-color);
+            color: $white-color;
+
+            transform: translateY(-50%);
+            position: absolute;
+            top: 50%;
+            right: 10px;
+        }
+}

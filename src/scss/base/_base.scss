@@ -10,6 +10,7 @@
   border: none;
   outline: none;
   resize: none;
+  transition: 0.4s linear;
 }
 
 html{
@@ -37,8 +38,6 @@ button { transition: 0.4s linear; }
 
 a {
   color: $white-color;
-
-  transition: 0.4s linear;
 
   &:hover{ color: $secondary-color; }
 
